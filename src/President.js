@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class President extends Component {
   render() {
     return (
-      <li className="list-group-item">
-        <h4 className="list-group-item-heading">{this.props.name}</h4>
-        <p className="list-group-item-text">{this.props.from} - {this.props.to}</p>
+      <li>
+        <h4>{this.props.name}</h4>
+        <p>{this.props.from} - {this.props.to}</p>
       </li>
     )
   }

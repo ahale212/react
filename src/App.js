@@ -11,17 +11,9 @@ const presidents = [
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <Summary amount={presidents.length} />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <Presidents presidents={presidents} />
-          </div>
-        </div>
+      <div>
+        <Summary amount={presidents.length} />
+        <Presidents presidents={presidents} />
       </div>
     )
   }

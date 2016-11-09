@@ -7,15 +7,11 @@ class Presidents extends Component {
       return <President key={"president_" + i} name={president.name} from={president.from} to={president.to} />
     })
     return (
-      <div className="panel panel-primary">
-        <div className="panel-heading">
-          <h3 className="panel-title">List of Presidents</h3>
-        </div>
-        <div className="panel-body">
-          <ul className="list-group">
-            {presidents}
-          </ul>
-        </div>
+      <div>
+        <h3>List of Presidents</h3>
+        <ul>
+          {presidents}
+        </ul>
       </div>
     )
   }
