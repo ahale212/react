@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 class Summary extends Component {
   render() {
     return (
-      <h1>
-        {this.props.amount} Presidents
-      </h1>
+      <h1>{this.props.amount} Presidents</h1>
     )
   }
 }

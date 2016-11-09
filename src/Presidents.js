@@ -3,26 +3,23 @@ import President from './President'
 
 class Presidents extends Component {
   render() {
-    const presidents = this.props.presidents.map((president) => {
-      return <President key={president.name} name={president.name} from={president.from} to={president.to} />
+    const presidents = this.props.presidents.map((president, i) => {
+      return <President key={"president_" + i} name={president.name} from={president.from} to={president.to} />
     })
     return (
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>From - To</th>
-          </tr>
-        </thead>
-        <tbody>
-          {presidents}
-        </tbody>
-      </table>
+      <div className="panel panel-primary">
+        <div className="panel-heading">
+          <h3 className="panel-title">List of Presidents</h3>
+        </div>
+        <div className="panel-body">
+          <ul className="list-group">
+            {presidents}
+          </ul>
+        </div>
+      </div>
     )
   }
 }
-
-
 
 Presidents.propTypes = {
   presidents: React.PropTypes.array.isRequired
