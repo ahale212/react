@@ -2,6 +2,8 @@
 
 The goal of the previous [Problem Set](https://github.com/gSchool/xp_react_problem_set_2) was to create a [React](https://facebook.github.io/react/) application that renders a static list of presidents, using multiple React components. This repository provides a possible solution as a starting point for the following problem.
 
+The application can be started with `npm start` after running `npm install`.
+
 ## Goals
 
 ### Goal 1:
