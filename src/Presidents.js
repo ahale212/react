@@ -18,11 +18,10 @@ class Presidents extends Component {
     const presidents = this.props.presidents.map((president, i) => {
       console.log(president.name + " in Presidents")
       return (
-        <div>
         <form>
-          <President key={"president_" + i} pid={president.pid} name={president.name} from={president.from} to={president.to} />
+        <President key={"president_" + i} pid={president.pid} name={president.name} from={president.from} to={president.to} />
+        <button key={"index_"} type="submit" onClick={this.onSubmit}>Delete</button>
         </form>
-      </div>
         )
     })
     return (
