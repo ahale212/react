@@ -2,9 +2,28 @@ import React, { Component } from 'react'
 import President from './President'
 
 class Presidents extends Component {
+
+  constructor(props){
+    super(props)
+    this.onSubmit=this.onSubmit.bind(this)
+  }
+
+  onSubmit(event){
+    event.preventDefault()
+    console.log(this.props.pid);
+    this.props.onRemovePresident(this.props.pid)
+  }
+
   render() {
     const presidents = this.props.presidents.map((president, i) => {
-      return <President key={"president_" + i} name={president.name} from={president.from} to={president.to} />
+      console.log(president.name + " in Presidents")
+      return (
+        <div>
+        <form>
+          <President key={"president_" + i} pid={president.pid} name={president.name} from={president.from} to={president.to} />
+        </form>
+      </div>
+        )
     })
     return (
       <div>
@@ -18,7 +37,8 @@ class Presidents extends Component {
 }
 
 Presidents.propTypes = {
-  presidents: React.PropTypes.array.isRequired
+  presidents: React.PropTypes.array.isRequired,
+  onRemovePresident: React.PropTypes.func.isRequired
 }
 
 export default Presidents
